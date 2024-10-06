@@ -19,6 +19,7 @@
             background-color: #004085;
             color: white;
             padding: 15px 20px;
+            text-align: center;
         }
 
         header h1 {
@@ -32,13 +33,16 @@
 
         nav a {
             color: white;
-            margin-right: 20px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            background: rgba(255, 255, 255, 0.2);
         }
 
         h2,
@@ -121,15 +125,35 @@
         footer a {
             color: white;
             text-decoration: none;
-            margin-right: 15px;
+            margin: 0 15px;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
 
-        .table-of-contents {
-            margin-bottom: 30px;
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                padding: 5px 8px;
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .coupon-code {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -149,20 +173,6 @@
             <a href="#final-thoughts">Final Thoughts</a>
         </nav>
     </header>
-
-    <div class="table-of-contents">
-        <h2>Table of Contents</h2>
-        <ul>
-            <li><a href="#announcement">The Exciting Announcement</a></li>
-            <li><a href="#coupon-code">Physics Wallah Universal Coupon Code</a></li>
-            <li><a href="#validity">Validity</a></li>
-            <li><a href="#why-physics-wallah">Why Physics Wallah?</a></li>
-            <li><a href="#benefits">The Benefits of Using the Coupon Code</a></li>
-            <li><a href="#how-to-use">How to Use the Coupon Code</a></li>
-            <li><a href="#discount-table">The Table of Discounts</a></li>
-            <li><a href="#final-thoughts">Final Thoughts</a></li>
-        </ul>
-    </div>
 
     <h2 id="announcement">The Exciting Announcement!</h2>
     <p>Your wait is over! I can hardly contain my excitement as I announce that a <strong>new maximum discount</strong> Physics Wallah coupon code is now available. This is not just any discount; it's a golden opportunity to make your learning journey more affordable. Whether you're enrolled in their batches, test series, or looking to dive into some new courses, this code is for you!</p>
@@ -222,7 +232,7 @@
     <p>Finally, fill in your payment details and complete your purchase. Congratulations, you’re now on your way to mastering your studies with Physics Wallah!</p>
 
     <h2 id="discount-table">The Table of Discounts</h2>
-   <table>
+    <table>
         <thead>
             <tr>
                 <th>Batch Category</th>
