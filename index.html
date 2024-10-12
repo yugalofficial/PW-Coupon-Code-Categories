@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PW Coupon Code 2024</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -39,44 +41,51 @@
         </div>
     </section>
 
-    <!-- Coupon Categories Table Section -->
+    <!-- Coupon Table Section -->
     <section class="table-section py-5">
         <div class="container">
             <h2 class="text-center mb-4">All PW Coupon Categories</h2>
+            <p class="text-center">Updated Coupons on <strong id="currentDate"></strong></p>
             <div class="table-responsive">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped text-center">
                     <thead class="table-dark">
                         <tr>
                             <th>Category</th>
-                            <th>Discount</th>
+                            <th>Student Discount</th>
                             <th>Coupon Code</th>
-                            <th>Updated On</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>UPSC</td>
-                            <td>₹1000 Off</td>
-                            <td><a href="#" onclick="showCouponModal('UPSC1000')">Get Coupon</a></td>
-                            <td>Updated on <span id="currentDate"></span></td>
+                            <td>Upskilling</td>
+                            <td>20% upto 4000</td>
+                            <td><a href="#" onclick="showCouponModal('UPSKILL20')">Get Coupon</a></td>
                         </tr>
+                        <tr>
+                            <td>Bihar Exams</td>
+                            <td>10% upto 60</td>
+                            <td><a href="#" onclick="showCouponModal('BIHAR10')">Get Coupon</a></td>
+                        </tr>
+                        <tr>
+                            <td>UP Exams</td>
+                            <td>10% upto 60</td>
+                            <td><a href="#" onclick="showCouponModal('UP10')">Get Coupon</a></td>
+                        </tr>
+                        <tr>
+                            <td>JAIIB AND CAIIB</td>
+                            <td>10% upto 200</td>
+                            <td><a href="#" onclick="showCouponModal('BANKING10')">Get Coupon</a></td>
+                        </tr>
+                        <!-- Repeat for all categories below -->
                         <tr>
                             <td>NEET</td>
-                            <td>₹500 Off</td>
-                            <td><a href="#" onclick="showCouponModal('NEET500')">Get Coupon</a></td>
-                            <td>Updated on <span id="currentDate"></span></td>
+                            <td>3% upto 100</td>
+                            <td><a href="#" onclick="showCouponModal('NEET3')">Get Coupon</a></td>
                         </tr>
                         <tr>
-                            <td>GATE</td>
-                            <td>₹1500 Off</td>
-                            <td><a href="#" onclick="showCouponModal('GATE1500')">Get Coupon</a></td>
-                            <td>Updated on <span id="currentDate"></span></td>
-                        </tr>
-                        <tr>
-                            <td>JEE</td>
-                            <td>₹750 Off</td>
-                            <td><a href="#" onclick="showCouponModal('JEE750')">Get Coupon</a></td>
-                            <td>Updated on <span id="currentDate"></span></td>
+                            <td>IIT-JEE</td>
+                            <td>3% upto 100</td>
+                            <td><a href="#" onclick="showCouponModal('IITJEE3')">Get Coupon</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -84,7 +93,7 @@
         </div>
     </section>
 
-    <!-- Modal for Coupon Codes -->
+    <!-- Coupon Modal -->
     <div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -106,8 +115,10 @@
         <p>&copy; 2024 PW Coupon Code. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS and Custom Script -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
     <script>
         // Function to display the modal with the correct coupon code
         function showCouponModal(couponCode) {
@@ -126,15 +137,8 @@
             });
         }
 
-        // Set the current date in the table
-        document.addEventListener("DOMContentLoaded", function() {
-            var date = new Date();
-            var formattedDate = date.toLocaleDateString();
-            var dateElements = document.querySelectorAll("#currentDate");
-            dateElements.forEach(function(element) {
-                element.textContent = formattedDate;
-            });
-        });
+        // Display the current date in the table section
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
     </script>
 </body>
 </html>
